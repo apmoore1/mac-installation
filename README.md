@@ -26,6 +26,7 @@ bash install.sh
 2. [conda](#conda)
     1. [Updating](#updating)
     2. [Deleting](#deleting)
+    3. [Guide](#guide)
 
 ## Installation script in detail
 
@@ -52,4 +53,10 @@ rm -rf ~/miniconda
 ```
 2. Remove the conda path from `~/.zshrc` if you are on MacOS Catalina or greater else remove from `~/.bash_profile`
 3. Remove any of the conda hidden files `rm -rf ~/.condarc ~/.conda ~/.continuum`
+
+### Guide
+
+For a quick guide to conda see this [page](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html) and a cheat sheet to conda commands [here.](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)
+
+If you do not want your command line to have a `(base)` at the begging of the prompt run `conda deactivate`. What `(base)` means is that the base conda environment is currently activate hence the reason why when you run `which python` it comes up as `$HOME/miniconda/bin/python` when `(base)` is active else it will return `/usr/bin/python`. If you want to use the `base` conda environment run `conda activate`.
 
