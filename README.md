@@ -4,6 +4,7 @@ Installs:
 
 1. Command line tools for Mac e.g. `git`, this needs to be installed first 
 2. Conda through [miniconda](https://conda.io/projects/conda/en/latest/user-guide/install/macos.html#install-macos-silent)
+3. Setting the main editor for `git` as nano.
 
 For the command line tools run, this was taken from this [apple stackexchange post](https://apple.stackexchange.com/questions/254380/why-am-i-getting-an-invalid-active-developer-path-when-attempting-to-use-git-a) which describes other solutions for command line tools for Mac:
 
@@ -32,6 +33,7 @@ This instllation script:
 
 1. Downloads the latest [miniconda](https://conda.io/projects/conda/en/latest/user-guide/install/macos.html#install-macos-silent) and installs it to `~/miniconda` without intervention (`-b`) and runs the tests to ensure it is built correctly (`-t`)
 2. Line 7, `conda init zsh` is currently setup for MacOS Catalina and greater as Mac moved to the `zsh` shell. If you are using an older version of MacOS change this line to `conda init`
+3. Setting the main editor for `git` as nano, line 11.
 
 ## conda
 

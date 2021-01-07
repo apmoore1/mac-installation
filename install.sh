@@ -6,3 +6,6 @@ bash ~/miniconda.sh -b -p ~/miniconda -t
 source ~/miniconda/bin/activate
 conda init zsh
 rm ~/miniconda.sh
+
+# Git
+git config --global core.editor "nano"
