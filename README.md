@@ -2,7 +2,14 @@
 
 Installs:
 
-1. Conda through [miniconda](https://conda.io/projects/conda/en/latest/user-guide/install/macos.html#install-macos-silent)
+1. Command line tools for Mac e.g. `git`, this needs to be installed first 
+2. Conda through [miniconda](https://conda.io/projects/conda/en/latest/user-guide/install/macos.html#install-macos-silent)
+
+For the command line tools run, this was taken from this [apple stackexchange post](https://apple.stackexchange.com/questions/254380/why-am-i-getting-an-invalid-active-developer-path-when-attempting-to-use-git-a) which describes other solutions for command line tools for Mac:
+
+``` bash
+xcode-select --install
+```
 
 For more detail on the installation script see section [Installation script in detail.](#installation-script-in-detail)
 
