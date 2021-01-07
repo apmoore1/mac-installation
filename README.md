@@ -16,8 +16,8 @@ bash install.sh
 
 1. [Installation script in detail](#installation-script-in-detail)
 2. [conda](#conda)
-  1. [Updating](#updating)
-  2. [Deleting](#deleting)
+    1. [Updating](#updating)
+    2. [Deleting](#deleting)
 
 ## Installation script in detail
 
