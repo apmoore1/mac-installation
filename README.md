@@ -27,6 +27,7 @@ bash install.sh
     1. [Updating](#updating)
     2. [Deleting](#deleting)
     3. [Guide](#guide)
+3. [Docker desktop](#docker-desktop) - this is not installed in the script
 
 ## Installation script in detail
 
@@ -59,4 +60,12 @@ rm -rf ~/miniconda
 For a quick guide to conda see this [page](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html) and a cheat sheet to conda commands [here.](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)
 
 If you do not want your command line to have a `(base)` at the begging of the prompt run `conda deactivate`. What `(base)` means is that the base conda environment is currently activate hence the reason why when you run `which python` it comes up as `$HOME/miniconda/bin/python` when `(base)` is active else it will return `/usr/bin/python`. If you want to use the `base` conda environment run `conda activate`.
+
+## Docker desktop
+
+This can be installed from [Docker](https://docs.docker.com/docker-for-mac/install/) as an application, it takes up around 5GB, and includes Docker Engine, Docker CLI client, Docker Compose, Notary, Kubernetes, and Credential Helper.
+
+### Unistall
+
+See the following [docker help page.](https://docs.docker.com/docker-for-mac/install/#uninstall-docker-desktop)
 
