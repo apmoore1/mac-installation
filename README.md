@@ -61,6 +61,11 @@ For a quick guide to conda see this [page](https://conda.io/projects/conda/en/la
 
 If you do not want your command line to have a `(base)` at the begging of the prompt run `conda deactivate`. What `(base)` means is that the base conda environment is currently activate hence the reason why when you run `which python` it comes up as `$HOME/miniconda/bin/python` when `(base)` is active else it will return `/usr/bin/python`. If you want to use the `base` conda environment run `conda activate`.
 
+If you do not want the `(base)` conda environment to run each time you start up a new command terminal, run the following and start a new terminal:
+``` bash
+conda config --set auto_activate_base false
+```
+
 ## Docker desktop
 
 This can be installed from [Docker](https://docs.docker.com/docker-for-mac/install/) as an application, it takes up around 5GB, and includes Docker Engine, Docker CLI client, Docker Compose, Notary, Kubernetes, and Credential Helper.
