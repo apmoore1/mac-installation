@@ -1,5 +1,7 @@
 # Mac software installation
 
+**Note** All of the following also works for the new M1 Apple processors.
+
 Installs:
 
 1. Command line tools for Mac e.g. `git`, this needs to be installed first 
