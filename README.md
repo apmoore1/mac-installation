@@ -30,6 +30,7 @@ bash install.sh
     2. [Deleting](#deleting)
     3. [Guide](#guide)
 3. [Docker desktop](#docker-desktop) - this is not installed in the script
+4. [GPG](#gpg) - this is not installed in the script
 
 ## Installation script in detail
 
@@ -75,4 +76,19 @@ This can be installed from [Docker](https://docs.docker.com/docker-for-mac/insta
 ### Unistall
 
 See the following [docker help page.](https://docs.docker.com/docker-for-mac/install/#uninstall-docker-desktop)
+
+## GPG
+
+GPG is used by [GitHub to sign commits](https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/about-commit-signature-verification), the best way I have found to install this on the Mac is through Conda. Create a conda environment called `gpg` and install [gnupg through conda forge](https://anaconda.org/conda-forge/gnupg). Below is a one line command to do all of this:
+
+``` bash
+conda create -n gpg -c conda-forge gnupg
+```
+
+Then when you want to use gpg use the gpg conda environment like so:
+
+``` bash
+conda activate gpg
+gpg --help
+```
 
