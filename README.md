@@ -30,7 +30,7 @@ bash install.sh
     2. [Deleting](#deleting)
     3. [Guide](#guide)
 3. [Docker desktop](#docker-desktop) - this is not installed in the script
-4. [GPG](#gpg) - this is not installed in the script
+4. [Brew for GPG](#brew-for-gpg) - installed through the [./brew_install.sh script](./brew_install.sh)
 
 ## Installation script in detail
 
@@ -77,18 +77,32 @@ This can be installed from [Docker](https://docs.docker.com/docker-for-mac/insta
 
 See the following [docker help page.](https://docs.docker.com/docker-for-mac/install/#uninstall-docker-desktop)
 
-## GPG
+## Brew for GPG
 
-GPG is used by [GitHub to sign commits](https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/about-commit-signature-verification), the best way I have found to install this on the Mac is through Conda. Create a conda environment called `gpg` and install [gnupg through conda forge](https://anaconda.org/conda-forge/gnupg). Below is a one line command to do all of this:
+GPG is used by [GitHub to sign commits](https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/about-commit-signature-verification), the best way I have found to install this on the Mac is through [Brew](https://brew.sh/). Brew can be installed using the [./brew_install.sh script.](./brew_install.sh):
 
-``` bash
-conda create -n gpg -c conda-forge gnupg
+```
+bash brew_install.sh
 ```
 
-Then when you want to use gpg use the gpg conda environment like so:
+This script will ask for your password, as it installs brew to the following directory `/opt/homebrew` if on Apple Silcon CPU else it will be `/usr/local`. Once you have run this script you will need to add brew to the `$PATH` environment variable, do this be adding the following to `~/.zshrc`:
 
 ``` bash
-conda activate gpg
-gpg --help
+export PATH=/opt/homebrew/bin:$PATH # if brew was installed to /usr/local then use the line below instead
+# export PATH=/usr/local/bin:$PATH
 ```
+
+This part of the guide was based off the [digital ocean guide on how to install and uninstall brew.](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-homebrew-on-macos)
+
+To install gpg:
+
+```
+brew install gnupg
+```
+
+**Note** I did try to install this through conda, but conda does not have pinentry which is required, therefore we cannot use conda and have to install brew to use gpg.
+
+### Uninstall Brew
+
+Read the [uninstall instructions from brew](https://github.com/Homebrew/install#uninstall-homebrew), which should uninstall brew and all of it's packages e.g. gpg.
 
