@@ -2,6 +2,8 @@
 
 **Note** All of the following also works for the new M1 Apple processors.
 
+**Note** If you want to install Python so that it works with the new M1 GPUs follow these instructions: https://llama-cpp-python.readthedocs.io/en/latest/install/macos/
+
 Installs:
 
 1. Command line tools for Mac e.g. `git`, this needs to be installed first 
