@@ -108,3 +108,17 @@ brew install gnupg
 
 Read the [uninstall instructions from brew](https://github.com/Homebrew/install#uninstall-homebrew), which should uninstall brew and all of it's packages e.g. gpg.
 
+## UV for python
+
+See the following for [installtion details](https://docs.astral.sh/uv/getting-started/installation/).
+
+``` bash
+curl -Lfo uv_install.sh https://astral.sh/uv/install.sh
+sh uv_install.sh
+
+echo 'eval "$(uv generate-shell-completion bash)"' >> ~/.bash_profile
+echo 'eval "$(uv generate-shell-completion zsh)"' >> ~/.zshrc
+echo 'eval "$(uvx --generate-shell-completion bash)"' >> ~/.bash_profile
+echo 'eval "$(uvx --generate-shell-completion zsh)"' >> ~/.zshrc
+```
+
