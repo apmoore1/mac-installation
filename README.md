@@ -122,6 +122,37 @@ echo 'eval "$(uvx --generate-shell-completion bash)"' >> ~/.bash_profile
 echo 'eval "$(uvx --generate-shell-completion zsh)"' >> ~/.zshrc
 ```
 
+### HuggingFace Hub
+
+To install the HuggingFace hub python library for the user, installs to the bin $PATH of UV ([guide from HuggingFace](https://huggingface.co/docs/huggingface_hub/en/guides/cli#using-uv)):
+
+``` bash
+uv tool install "huggingface_hub"
+```
+
+and now the `hf` command can be used, like so:
+
+``` bash
+hf --help
+```
+
+To login:
+
+``` bash
+hf auth login --token $HF_TOKEN --add-to-git-credential
+```
+
+To logout:
+
+``` bash
+hf auth logout
+```
+This command logs you out. In practice, it will delete all tokens stored on your machine. If you want to remove a specific token, you can specify the token name as an argument. This command will not log you out if you are logged in using the HF_TOKEN environment variable (see reference). If that is the case, you must unset the environment variable in your machine configuration (`unset HF_TOKEN`).
+
+For more information of `hf auth` see the [following](https://huggingface.co/docs/huggingface_hub/en/guides/cli#command-line-interface-cli).
+
+uv also has authentication support for HuggingFace, see the [following](https://docs.astral.sh/uv/concepts/authentication/third-party/#hugging-face-support).
+
 ## Git LFS and xet
 
 This has come from the HuggingFace [guide.](https://huggingface.co/docs/hub/xet/using-xet-storage#git)
@@ -136,5 +167,12 @@ curl --proto '=https' --output xet_install.sh --tlsv1.2 -sSf https://raw.githubu
 cat xet_install.sh| sh
 rm xet_install.sh
 # TEST: git-xet --version
+```
+
+To uninstall:
+
+``` bash
+git-xet uninstall
+sudo rm $(which git-xet)
 ```
 
