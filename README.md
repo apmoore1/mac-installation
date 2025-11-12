@@ -122,3 +122,19 @@ echo 'eval "$(uvx --generate-shell-completion bash)"' >> ~/.bash_profile
 echo 'eval "$(uvx --generate-shell-completion zsh)"' >> ~/.zshrc
 ```
 
+## Git LFS and xet
+
+This has come from the HuggingFace [guide.](https://huggingface.co/docs/hub/xet/using-xet-storage#git)
+
+We assume that `$HOME/.local/bin` is a path on the $PATH environment variable.
+
+``` bash
+brew install git-lfs
+git lfs install
+curl --proto '=https' --output xet_install.sh --tlsv1.2 -sSf https://raw.githubusercontent.com/huggingface/xet-core/refs/heads/main/git_xet/install.sh
+# Change the INSTALL_DIR to INSTALL_DIR="/Users/andrew/.local/bin"
+cat xet_install.sh| sh
+rm xet_install.sh
+# TEST: git-xet --version
+```
+
