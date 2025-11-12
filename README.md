@@ -163,7 +163,7 @@ We assume that `$HOME/.local/bin` is a path on the $PATH environment variable.
 brew install git-lfs
 git lfs install
 curl --proto '=https' --output xet_install.sh --tlsv1.2 -sSf https://raw.githubusercontent.com/huggingface/xet-core/refs/heads/main/git_xet/install.sh
-# Change the INSTALL_DIR to INSTALL_DIR="/Users/andrew/.local/bin"
+# Change the INSTALL_DIR to INSTALL_DIR="${HOME}/.local/bin"
 cat xet_install.sh | sh
 rm xet_install.sh
 # TEST: git-xet --version
